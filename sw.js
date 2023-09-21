@@ -1,0 +1,1 @@
+console.warn('Response from ServiceWorker')

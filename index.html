@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Service Worker Example</title>
+    </head>
+
+    <body>
+        <script>
+
+            if('serviceWorker' in navigator)
+            {
+                navigator.serviceWorker.register('./sw.js').then((resp)=>{
+                    console.warn("Response : ",resp)
+                }).catch((e)=>{
+                    console.error(e)
+                })
+            }
+            else
+            {
+                console.warn('No ServiceWorker Available')
+            }
+
+
+            
+        </script>
+    </body>
+</html>
